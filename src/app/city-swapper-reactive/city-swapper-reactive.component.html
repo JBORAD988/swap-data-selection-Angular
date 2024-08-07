@@ -1,0 +1,18 @@
+<h1>Reactive Form </h1>
+<form [formGroup]="cityForm">
+  <div>
+    <label for="city1">City 1:</label>
+    <select id="city1" formControlName="city1">
+      <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="city2">City 2:</label>
+    <select id="city2" formControlName="city2">
+      <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+    </select>
+  </div>
+
+  <button type="button" (click)="swapCities()">Swap Cities</button>
+</form>
