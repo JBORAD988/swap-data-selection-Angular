@@ -1,0 +1,15 @@
+<div>
+  <label for="city1">City 1:</label>
+  <select id="city1" [(ngModel)]="city1">
+    <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+  </select>
+</div>
+
+<div>
+  <label for="city2">City 2:</label>
+  <select id="city2" [(ngModel)]="city2">
+    <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+  </select>
+</div>
+
+<button (click)="swapCities()">Swap Cities</button>
